@@ -1,13 +1,15 @@
-import React from 'react'
+import React, { useState } from 'react'
 
-const MyCard = () => {
+const MyCard = ({name, img}) => {
+  // const [info, setInfo] = useState(data)
+ console.log(name)
   return (
     <div className="card-1 card-div">
     <div className="gow-img-div img-div">
-        <img src="https://i.ibb.co/wBwpLqH/Awamo.webp"/>
+        <img src={img}/>
     </div>
     <div className="text-container">
-        <h2 className="item-name">Awamo</h2>
+        <h2 className="item-name">{name}</h2>
         
         <div className="pricing-and-cart">
             <div className="pricing">

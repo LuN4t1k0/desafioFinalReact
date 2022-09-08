@@ -48,7 +48,7 @@ body{
     justify-content: center;
     align-content: flex-start;
     margin: auto;
-    min-height: 30em;
+    min-height: 20em;
     padding: 3em 1em 1em 1em;
     box-sizing: border-box;
 }
@@ -73,7 +73,7 @@ body{
 /* ======== General styling of all cards and heart divs ========== */
 .img-div{
     width: 100%;
-    height: 10em;
+    height: 19em;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -99,7 +99,8 @@ body{
 }
 
 .gow-img-div img{
-    width: 55%;
+    max-height: 250px;
+    max-width: 40%;
     transform: translateY(7.5%);
     /* background-color: whitesmoke; */
 }
@@ -115,7 +116,7 @@ body{
     flex-direction: column;
     /* background-color: yellow; */
     padding: 0 1.5em;
-    padding-top: 5em;
+    padding-top: 1em;
     padding-bottom: 1em;
     box-sizing: border-box;
 }
