@@ -1,8 +1,10 @@
-import React, { useState } from 'react'
 
-const MyCard = ({name, img}) => {
-  // const [info, setInfo] = useState(data)
- console.log(name)
+
+
+const MyCard = ({name, specie, role, img, status, universe, trasnform, planet}) => {
+
+ 
+
   return (
     <div className="card-1 card-div">
     <div className="gow-img-div img-div">
@@ -13,10 +15,10 @@ const MyCard = ({name, img}) => {
         
         <div className="pricing-and-cart">
             <div className="pricing">
-                <p className="rol">Angel</p>
-                <p className="previous-price">Vivo</p>
-                <p className="planetaOrigen">Planeta Desconocido</p>
-                <p className="universo">Universo 8</p>
+                <p className="rol">{role}</p>
+                <p className="planetaOrigen">{specie}</p>
+                <p className="previous-price">{status}</p>
+                <p className="universo"><span>Universo </span>{universe}</p>
             </div>
             <i className="fas fa-shopping-cart"></i>
         </div>

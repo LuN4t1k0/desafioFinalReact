@@ -1,31 +1,21 @@
-import { useEffect, useState } from 'react'
 
-import './Index.css'
-import MyCardContainer from './components/MyCardContainer'
+
+import "./Index.css";
+import MyCardContainer from "./components/MyCardContainer";
+import ApiProvider from "./context/ApiProvider";
+
 
 function App() {
- 
-  const getData = async () => {
-    const URL = "https://dragon-ball-super-api.herokuapp.com/api/characters"
-    const response = await fetch(URL)
-    const result = await response.json()
-    setData(result)
-    // console.log(result)
-  }
-
-  const [data, setData] = useState([])
-
-  useEffect(() => {
-    getData()
-
-  }, [])
-  
 
   return (
+    <ApiProvider>
+
     <div className="container">
-      <MyCardContainer data={data}/>
+      <MyCardContainer/>
     </div>
-  )
+    </ApiProvider>
+  
+  );
 }
 
-export default App
+export default App;
