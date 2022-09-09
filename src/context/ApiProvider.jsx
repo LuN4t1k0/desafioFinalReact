@@ -7,9 +7,19 @@ const ApiProvider = (props) => {
     const URL = "https://dragon-ball-super-api.herokuapp.com/api/characters";
     const response = await fetch(URL);
     const result = await response.json();
+    sortData(result, "name", true)
     setData(result);
     // console.log(result)
   };
+
+  const sortData = (arr, key, asc=true) => {
+      return arr.sort((a, b) => {
+        let x = a[key];
+        let y = b[key];
+        if (asc) { return ((x < y) ? -1 : ((x > y) ? 1 : 0)); }
+        else { return ((x > y) ? -1 : ((x < y) ? 1 : 0)); }
+      });
+  }
 
   const filteredCharacter = () => {
     if (search === 0) {
@@ -27,11 +37,23 @@ const ApiProvider = (props) => {
   };
 
   const nextPage = () => {
-    if(filteredCharacter().length > currentPage + 5){
+    if(data.filter(
+      (x) =>
+        x.name.toLocaleLowerCase().includes(search) ||
+        x.specie.toLocaleLowerCase().includes(search) ||
+        x.role.toLocaleLowerCase().includes(search) ||
+        x.universe.toLocaleLowerCase().includes(search) ||
+        x.status.toLocaleLowerCase().includes(search)
+    ).length > currentPage + 8 ){
       setCurrentPage(currentPage + 8);
+      
     }
   };
 
+
+
+
+  
   const prevPage = () => {
     if (currentPage > 0) {
       setCurrentPage(currentPage - 8);
