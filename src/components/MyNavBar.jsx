@@ -10,6 +10,7 @@ import {ApiContext} from '../context/ApiProvider'
 
 const MyNavBar = () => {
   const {searchCharacter , search} = useContext(ApiContext)
+  
   return (
     <Navbar bg="light" expand="lg">
       <Container fluid>

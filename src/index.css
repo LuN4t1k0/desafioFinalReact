@@ -34,6 +34,7 @@ html{
 
 body{
     background-color: lightcyan;  
+    background-image: url('./img/bgz2.jpg');
 }
 
 .container input{
@@ -42,7 +43,7 @@ body{
 
 .container{
     max-width: 100em;
-    background-color: lightgreen;
+    /* background-color: lightgreen; */
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
