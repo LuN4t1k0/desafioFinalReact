@@ -17,8 +17,9 @@ const MyCard = ({name, specie, role, img, status, universe, trasnform, planet}) 
             <div className="pricing">
                 <p className="rol">{role}</p>
                 <p className="planetaOrigen">{specie}</p>
-                <p className="previous-price">{status}</p>
                 <p className="universo"><span>Universo </span>{universe}</p>
+                <p className="previous-price">{status}</p>
+                
             </div>
             <i className="fas fa-shopping-cart"></i>
         </div>

@@ -2,11 +2,11 @@ import React, { useContext } from "react";
 import MyCard from "./MyCard";
 import { ApiContext } from "../context/ApiProvider";
 const MyCardContainer = () => {
-  const { data } = useContext(ApiContext);
+  const { filteredCharacter } = useContext(ApiContext);
 
   return (
     <div className="container">
-      {data.map((x) => (
+      {filteredCharacter().map((x) => (
         <MyCard
           key={x.id}
           name={x.name}
@@ -19,6 +19,7 @@ const MyCardContainer = () => {
           planet={x.originplanet}
         />
       ))}
+      
     </div>
   );
 };
