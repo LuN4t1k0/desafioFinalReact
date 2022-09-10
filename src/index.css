@@ -1,273 +1,236 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;700;800;900&display=swap");
 
-@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;700;800;900&display=swap');
-
-*{
-    padding: 0;
-    margin: 0;
+* {
+  padding: 0;
+  margin: 0;
 }
 
-:root{
-    font-size: 16px;
-    font-family: "Raleway";
-    --heading-color: hsl(0, 0%, 7%);
-    --date-text-color: hsl(0, 0%, 51%);
-    --previous-price-text-color: hsl(0, 98%, 44%);
-    --current-price-text-color: hsla(0, 0%, 0%, 0.822);
-    --liked-heart-icon-color: hsl(0, 98%, 44%);
-    --heart-icon-color: whitesmoke;
-    --pricing-font-weight: 800;
-    --title-font-weight: 800;
-    --date-font-weight: 550;
+:root {
+  font-size: 16px;
+  font-family: "Raleway";
+  --heading-color: hsl(0, 0%, 7%);
+  --date-text-color: hsl(0, 0%, 51%);
+  --previous-price-text-color: hsl(0, 98%, 44%);
+  --current-price-text-color: hsla(0, 0%, 0%, 0.822);
+  --liked-heart-icon-color: hsl(0, 98%, 44%);
+  --heart-icon-color: whitesmoke;
+  --pricing-font-weight: 800;
+  --title-font-weight: 800;
+  --date-font-weight: 550;
 
-    /* Cards colors */
-    --card-main-color : whitesmoke;
-    --card-1-secondary-color: rgb(192, 82, 82);
-    --card-2-secondary-color: rgb(67,53,27);
-    --card-3-secondary-color: rgb(178,180,179);
-    --card-4-secondary-color: rgb(96,109,117);
+  /* Cards colors */
+  --card-main-color: whitesmoke;
+  --card-1-secondary-color: rgb(192, 82, 82);
+  --card-2-secondary-color: rgb(67, 53, 27);
+  --card-3-secondary-color: rgb(178, 180, 179);
+  --card-4-secondary-color: rgb(96, 109, 117);
 }
 
-html{
-    width: 100%;
-    height: 100%;
+html {
+  width: 100%;
+  height: 100%;
 }
 
-body{
-   
-    background-image: url('./img/bgz2.jpg');
+body {
+  background-image: url("./img/bgz2.jpg");
 }
 
-
-.container input{
-    display: none;
+.container input {
+  display: none;
 }
 
-.centercris{
-    display: flex;
-    justify-content: center
+.centercris {
+  display: flex;
+  justify-content: center;
 }
 
-.radarCris{
-    height: 60px;
-    padding-left: 100px;
+.radarCris {
+  height: 60px;
+  padding-left: 100px;
 }
 
-.imgNoFund{
-    background-image: url("./img/sinResultado.png");
-    height: 600px;
-    width: 50%;
-    background-repeat: no-repeat;
-    display: flex;
-    align-items: center;
-
+.imgNoFund {
+  background-image: url("./img/sinResultado.png");
+  height: 600px;
+  width: 50%;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
 }
 
-.loader{
-    background-image: url("./img/capsula.png");
-    height: 600px;
-    width: 50%;
-    background-repeat: no-repeat;
-    display: flex;
-    align-items: center;
-  }
-
-
-.container{
-    max-width: 100em;
-    /* background-color: rgb(3, 97, 3); */
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    justify-content: center;
-    align-content: flex-start;
-    margin: auto;
-    min-height: 20em;
-    padding: 1em 1em 1em 1em;
-    box-sizing: border-box;
+.loader {
+  background-image: url("./img/capsula.png");
+  height: 600px;
+  width: 50%;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
 }
 
-/* Card Styling */
-.card-div{
-    width: 20em;
-    min-height: 20em;
-    display: flex;
-    flex-direction: column;
-    justify-items: center;
-    align-items: center;
-    background-color: var(--card-main-color);
-    margin: 0.6em;
-    box-sizing: border-box;
-    
-    border-radius: 10px;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
-    transition: transform 0.2s ease-in-out;
+.container {
+  max-width: 100em;
+
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  align-content: flex-start;
+  margin: auto;
+  min-height: 20em;
+  padding: 1em 1em 1em 1em;
+  box-sizing: border-box;
 }
 
-/* ======== General styling of all cards and heart divs ========== */
-.img-div{
-    width: 100%;
-    height: 18.5em;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    padding-top: 1rem;
-    z-index: 1;
-    border-radius: 10px;
+.card-div {
+  width: 20em;
+  min-height: 20em;
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  align-items: center;
+  background-color: var(--card-main-color);
+  margin: 0.6em;
+  box-sizing: border-box;
+
+  border-radius: 10px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  transition: transform 0.2s ease-in-out;
 }
 
-.img-div img{
-    transform-origin: bottom;
-    transform: translateY(7.5%);
-    transition: transform 0.3s ease-in-out;
-    padding-bottom: 1em;
-    
+.img-div {
+  width: 100%;
+  height: 18.5em;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding-top: 1rem;
+  z-index: 1;
+  border-radius: 10px;
 }
 
-
-
-/* God of war image and heart-background*/
-.gow-img-div{
-    
-    background-image: url('https://wallpaperaccess.com/full/387102.jpg');
-    background-size: cover;
+.img-div img {
+  transform-origin: bottom;
+  transform: translateY(7.5%);
+  transition: transform 0.3s ease-in-out;
+  padding-bottom: 1em;
 }
 
-.gow-img-div img{
-    max-height: 250px;
-    max-width: 40%;
-    transform: translateY(7.5%);
-    
+.gow-img-div {
+  background-image: url("https://wallpaperaccess.com/full/387102.jpg");
+  background-size: cover;
 }
 
+.gow-img-div img {
+  max-height: 250px;
+  max-width: 40%;
+  transform: translateY(7.5%);
+}
 
+.text-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
 
+  padding: 0 1.5em;
+  padding-top: 1em;
 
-.text-container{
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    /* background-color: yellow; */
-    padding: 0 1.5em;
-    padding-top: 1em;
-    /* padding-bottom: 1em; */
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 .text-container .item-name,
-.text-container .date{
-    margin: 0em 0;
-    /* margin: 0.25em 0; */
-    text-align: center;
+.text-container .date {
+  margin: 0em 0;
+
+  text-align: center;
 }
 
-.text-container .item-name{
-    font-size: 1.4em;
-    font-weight: var(--title-font-weight);
-    color: var(--heading-color);
+.text-container .item-name {
+  font-size: 1.4em;
+  font-weight: var(--title-font-weight);
+  color: var(--heading-color);
 }
 
-.text-container .date{
-    font-size: 0.9em;
-    font-weight: var(--date-font-weight);
-    color: var(--date-text-color);
+.text-container .date {
+  font-size: 0.9em;
+  font-weight: var(--date-font-weight);
+  color: var(--date-text-color);
 }
 
-/* === Pricing and cart div  ===== */
-.pricing-and-cart{
-    /* background-color: wheat; */
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    margin: 0em 0 1em 0;
-    /* margin: 0.25em 0 1em 0; */
+.pricing-and-cart {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 0em 0 1em 0;
 }
 
-.pricing{
-    display: flex;
-    flex-direction: column;
-    text-align: left;
+.pricing {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
 }
 
-.rol{
+.rol {
   color: var(--current-price-text-color);
   font-size: 1.2rem;
   font-weight: var(--pricing-font-weight);
-  /* background-color: yellow; */
+
   margin: 0;
 }
 
-.universo{
+.universo {
   color: var(--current-price-text-color);
   font-size: 1.3rem;
   font-weight: var(--pricing-font-weight);
-  /* background-color: yellow; */
+
   margin: 0;
 }
 
-.planetaOrigen{
+.planetaOrigen {
   color: var(--current-price-text-color);
   font-size: 1rem;
-  /* font-weight: var(--pricing-font-weight); */
-  /* background-color: yellow; */
+
   margin: 0;
 }
 
-.previous-price{
-    font-size: 0.9rem;
-    font-weight: var(--pricing-font-weight);
-    /* color: var(--previous-price-text-color); */
-
-    /* text-decoration: line-through; */
-    background-color: whitesmoke;
-    text-align: left;
+.previous-price {
+  font-size: 0.9rem;
+  font-weight: var(--pricing-font-weight);
+  background-color: whitesmoke;
+  text-align: left;
 }
 
-.current-price{
-    color: var(--current-price-text-color);
-    font-size: 1.3rem;
-    font-weight: var(--pricing-font-weight);
-    /* background-color: yellow; */
-    margin: 0;
+.current-price {
+  color: var(--current-price-text-color);
+  font-size: 1.3rem;
+  font-weight: var(--pricing-font-weight);
+
+  margin: 0;
 }
 
-/* .pricing-and-cart{
-    width: 100%;
-} */
-
-
-
-/* ====== Hover effects ======= */
-.card-div:hover .img-div img{
-    transform: translateY(7.5%) scale(1.2);
+.card-div:hover .img-div img {
+  transform: translateY(7.5%) scale(1.2);
 }
 
-.card-div:hover{
-    transform: translate(0, -10px);
+.card-div:hover {
+  transform: translate(0, -10px);
 }
 
 .form-control {
-    display: flex;
-    width: 60%;
-    padding: 0.375rem 0.75rem;
-    font-size: 1rem;
-    font-weight: 400;
-    line-height: 1.5;
-    color: #212529;
-    background-color: #fff;
-    background-clip: padding-box;
-    border: 1px solid #ced4da;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-    border-radius: 0.375rem;
-    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+  display: flex;
+  width: 60%;
+  padding: 0.375rem 0.75rem;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #212529;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid #ced4da;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border-radius: 0.375rem;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
-
-
-
-
-
-
-
