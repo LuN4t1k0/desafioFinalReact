@@ -50,10 +50,6 @@ const ApiProvider = (props) => {
     }
   };
 
-
-
-
-  
   const prevPage = () => {
     if (currentPage > 0) {
       setCurrentPage(currentPage - 8);

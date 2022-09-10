@@ -1,48 +1,41 @@
-import React, { useContext } from 'react'
-import Button from 'react-bootstrap/Button';
-import Container from 'react-bootstrap/Container';
-import Form from 'react-bootstrap/Form';
-import Nav from 'react-bootstrap/Nav';
-import Navbar from 'react-bootstrap/Navbar';
-import NavDropdown from 'react-bootstrap/NavDropdown';
+import React, { useContext } from "react";
 
-import {ApiContext} from '../context/ApiProvider'
+import Container from "react-bootstrap/Container";
+import radar from "../img/radarDragon.png"
+import Nav from "react-bootstrap/Nav";
+import Navbar from "react-bootstrap/Navbar";
+import NavDropdown from "react-bootstrap/NavDropdown";
+
+import { ApiContext } from "../context/ApiProvider";
 
 const MyNavBar = () => {
-  const {searchCharacter , search} = useContext(ApiContext)
-  
+  const { searchCharacter, search } = useContext(ApiContext);
+
   return (
-    <Navbar bg="light" expand="lg">
+    <Navbar bg="light" expand="lg" style={{ height: "80px", border: "none" }}>
       <Container fluid>
-        <Navbar.Brand href="#">Navbar scroll</Navbar.Brand>
+        <Navbar.Brand href="#"><img src={radar} alt="" className="radarCris" />El-RADAR.CL</Navbar.Brand>
         <Navbar.Toggle aria-controls="navbarScroll" />
-        <Navbar.Collapse id="navbarScroll">
+        <Navbar.Collapse className="centercris" id="navbarScroll">
           <Nav
-            className="me-auto my-2 my-lg-0"
-            style={{ maxHeight: '100px' }}
+            className=" mx-5 my-2 my-lg-0"
+            style={{ maxHeight: "100px" }}
             navbarScroll
           >
-            <Nav.Link href="#action1">Inicio</Nav.Link>
-            <Nav.Link href="#action2">Link</Nav.Link>
-            <NavDropdown title="Link" id="navbarScrollingDropdown">
-              <NavDropdown.Item href="#action3">Action</NavDropdown.Item>
-              <NavDropdown.Item href="#action4">
-                Another action
-              </NavDropdown.Item>
-              <NavDropdown.Divider />
-              <NavDropdown.Item href="#action5">
-                Something else here
-              </NavDropdown.Item>
-            </NavDropdown>
-            <Nav.Link href="#" disabled>
-              Link
-            </Nav.Link>
+            <input
+              type="text"
+              className=" form-control "
+              placeholder="Buscar personaje !"
+              value={search}
+              onChange={searchCharacter}
+              style={{ width: "700px", border: "none" }}
+            />
+            
           </Nav>
-          <input type="text" className=' form-control ' placeholder='Buscar personaje !' value={search} onChange={searchCharacter}/>
         </Navbar.Collapse>
       </Container>
     </Navbar>
-  )
-}
+  );
+};
 
-export default MyNavBar
+export default MyNavBar;

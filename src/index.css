@@ -42,6 +42,16 @@ body{
     display: none;
 }
 
+.centercris{
+    display: flex;
+    justify-content: center
+}
+
+.radarCris{
+    height: 60px;
+    padding-left: 100px;
+}
+
 .imgNoFund{
     background-image: url("./img/sinResultado.png");
     height: 600px;
@@ -72,7 +82,7 @@ body{
     align-content: flex-start;
     margin: auto;
     min-height: 20em;
-    padding: 3em 1em 1em 1em;
+    padding: 1em 1em 1em 1em;
     box-sizing: border-box;
 }
 
