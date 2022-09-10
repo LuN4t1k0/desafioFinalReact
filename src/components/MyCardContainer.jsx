@@ -1,6 +1,7 @@
 import React, { useContext } from "react";
 import MyCard from "./MyCard";
 import { ApiContext } from "../context/ApiProvider";
+import MyBadSerch from "./MyBadSerch";
 const MyCardContainer = () => {
   const { filteredCharacter } = useContext(ApiContext);
 
@@ -20,7 +21,7 @@ const MyCardContainer = () => {
           trasnform={x.trasnform}
           planet={x.originplanet}
         />
-      )) : <h1>:( Busqueda sin resultados </h1>}
+      )) : <MyBadSerch/>}
     </div>
   );
 };

@@ -37,8 +37,19 @@ body{
     background-image: url('./img/bgz2.jpg');
 }
 
+
 .container input{
     display: none;
+}
+
+.imgNoFund{
+    background-image: url("./img/sinResultado.png");
+    height: 600px;
+    width: 50%;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+
 }
 
 .container{
