@@ -33,7 +33,7 @@ html{
 }
 
 body{
-    background-color: lightcyan;  
+   
     background-image: url('./img/bgz2.jpg');
 }
 
@@ -52,9 +52,19 @@ body{
 
 }
 
+.loader{
+    background-image: url("./img/capsula.png");
+    height: 600px;
+    width: 50%;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+  }
+
+
 .container{
     max-width: 100em;
-    /* background-color: lightgreen; */
+    /* background-color: rgb(3, 97, 3); */
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
@@ -108,7 +118,7 @@ body{
 
 /* God of war image and heart-background*/
 .gow-img-div{
-    /* background-color: var(--card-1-secondary-color); */
+    
     background-image: url('https://wallpaperaccess.com/full/387102.jpg');
     background-size: cover;
 }
@@ -117,12 +127,10 @@ body{
     max-height: 250px;
     max-width: 40%;
     transform: translateY(7.5%);
-    /* background-color: whitesmoke; */
+    
 }
 
-.card-1 .like-icon-div{
-    background-color: var(--card-1-secondary-color);
-}
+
 
 
 .text-container{
@@ -179,16 +187,6 @@ body{
   /* background-color: yellow; */
   margin: 0;
 }
-
-.especie{
-
-}
-
-.estado{
-
-}
-
-
 
 .universo{
   color: var(--current-price-text-color);

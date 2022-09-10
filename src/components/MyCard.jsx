@@ -1,7 +1,7 @@
 
 
 
-const MyCard = ({name, specie, role, img, status, universe, trasnform, planet}) => {
+const MyCard = ({name, specie, role, img, status, universe }) => {
 
  
 

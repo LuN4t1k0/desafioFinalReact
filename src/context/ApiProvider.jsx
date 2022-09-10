@@ -67,7 +67,7 @@ const ApiProvider = (props) => {
 
   useEffect(() => {
     getData();
-    filteredCharacter();
+    // filteredCharacter();
   }, []);
 
   const [data, setData] = useState([]);
