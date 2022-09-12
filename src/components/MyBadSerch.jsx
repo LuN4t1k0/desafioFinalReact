@@ -3,9 +3,7 @@ import React from 'react'
 const MyBadSerch = () => {
   return (
     <div className='container center'>
-      <div className="imgNoFund">
-
-      </div>
+      <img className='img-fluid' src="../src/img/sinResultado.png" alt="buesqueda sin resultados" />
     </div>
   )
 }

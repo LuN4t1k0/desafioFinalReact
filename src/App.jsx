@@ -7,6 +7,7 @@ import ApiProvider from "./context/ApiProvider";
 import MyNavBar from "./components/MyNavBar";
 import MyPaginator from './components/MyPaginator';
 import MyLoader from './components/MyLoader'
+import MyMenu from './components/MyMenu';
 
 
 
@@ -15,13 +16,14 @@ function App() {
 
   return (
     <ApiProvider>
-      <MyNavBar/>
+      {/* <MyNavBar/> */}
+      <MyMenu/>
 
-    <div className="container">
+    <div className="bigbox">
       <Suspense fallback={<MyLoader/> }>
       <MyCardContainer/>
-      </Suspense>
       <MyPaginator/>
+      </Suspense>
     </div>
     </ApiProvider>
 

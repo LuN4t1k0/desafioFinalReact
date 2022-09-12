@@ -27,13 +27,81 @@
 }
 
 html {
-  width: 100%;
-  height: 100%;
+  /* width: 100%;
+  height: 100%; */
 }
 
 body {
-  background-image: url("./img/bgz2.jpg");
+  /* height: 100vh; */
+
 }
+
+.paginator{
+  margin-bottom: 100px
+}
+
+.bigbox{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-image: url("./img/bgz2.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  /* height: calc(100vh - 80px); */
+  
+
+
+}
+
+.contenedorMenu{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100px;
+  width: 100%;
+  background: #443c8a;
+
+ 
+  
+}
+
+@media (width >= 768px ) {
+  .contenedorMenu{
+    flex-direction: row;
+    justify-content: space-around;
+    height: 80px;
+  }
+} 
+@media (width < 768px ) {
+  .logo img {
+    height: 35px;
+  }
+} 
+
+
+ .logo{
+  
+  display: flex;
+  flex-direction: row;
+  color: white;
+
+}
+
+.logo img {
+  height: 55px;
+}
+
+.search {
+  border: none;
+
+}
+
+.search input {
+  width: 100%;
+}
+
+
+
 
 .container input {
   display: none;
@@ -50,12 +118,8 @@ body {
 }
 
 .imgNoFund {
-  background-image: url("./img/sinResultado.png");
-  height: 600px;
-  width: 50%;
-  background-repeat: no-repeat;
-  display: flex;
-  align-items: center;
+  max-width: 100%;
+  height: auto;
 }
 
 .loader {

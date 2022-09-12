@@ -25,7 +25,7 @@ const MyNavBar = () => {
             <input
               type="text"
               className=" form-control "
-              placeholder="Buscar personaje !"
+              placeholder="Nombre, Universo, tipo, Status !"
               value={search}
               onChange={searchCharacter}
               style={{ width: "700px", border: "none" }}
